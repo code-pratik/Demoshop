@@ -1,0 +1,119 @@
+.container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 3rem;
+  width: 90%;
+  /* gap: 10px; */
+}
+
+.rightContainer {
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 1px solid lightgray;
+  border-left: none;
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+  width: 40%;
+}
+.leftContainer {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 80%;
+  border: 1px solid lightgray;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+}
+
+.list1,
+.list2,
+.itemlist li {
+  font-size: 1rem;
+  list-style: none;
+}
+.list2 li {
+  margin-bottom: 10px;
+}
+
+.hr {
+  height: 1px;
+  background-color: rgb(156, 28, 28);
+  border: none;
+}
+.subTotal {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.3rem;
+  border: 1px solid black;
+  padding: 1rem;
+  border-left: none;
+  border-right: none;
+}
+.subTotal2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+  border: 1px solid black;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+}
+
+.list1 {
+  box-sizing: border-box;
+  display: flex;
+  gap: 2.7rem;
+  border: 1px solid black;
+  flex-direction: row-reverse;
+  padding: 1rem;
+  width: 96%;
+  border-left: none;
+  border-right: none;
+  float: right;
+}
+
+.Total {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  padding: 1rem;
+}
+
+.CheckOutBtn {
+  color: white;
+  margin-top: 5rem;
+  width: 100%;
+}
+/* .li1 {
+  margin-left: 2.5rem;
+} */
+
+/* .btn {
+  font-size: 0.7rem;
+  background: black;
+  color: white;
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.5rem;
+  border: none;
+} */
+.itemlist {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2.7rem;
+}
+.itemlist {
+  border-bottom: 1px solid lightgray;
+}
+
+.textField {
+  margin-top: 5.8rem;
+}
+
+.couponbtn {
+  margin-top: 2.5rem;
+  color: white;
+}
+.deletebtn {
+  color: black;
+}

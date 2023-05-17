@@ -9,8 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.12.3",
+    "@reduxjs/toolkit": "^1.9.5",
+    "iron-session": "^6.3.1",
+    "mdb-react-ui-kit": "^6.0.0",
     "next": "13.3.4",
+    "next-auth": "^4.22.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-redux": "^8.0.5",
+    "swr": "^2.1.5"
   }
 }

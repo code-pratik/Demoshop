@@ -1,0 +1,55 @@
+.email {
+  font-family: FontAwesome;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 100%;
+  height: 35px;
+  padding-left: 10px;
+}
+.label {
+  font-size: 11px;
+  color: rgb(25, 25, 25);
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  text-align: center;
+  padding: 26px 30px 80px 30px;
+  background: transparent;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.email::placeholder {
+  font-size: 15px;
+  color: rgb(188, 184, 184);
+}
+
+.btn {
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 10px;
+}
+.micon {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.sbtn {
+  border: none;
+  padding: 10px 13px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
