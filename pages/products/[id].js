@@ -4,7 +4,7 @@ import Goback from "@/componets/goback";
 import React, { useEffect, useState } from "react";
 import StarIcon from "@mui/icons-material/Star";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
-import styles from "/Users/pratikprajapati/Desktop/nextjs/my-app/styles/Productdetails.module.css";
+import styles from "/styles/Productdetails.module.css";
 import { Button } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "@/slices/cartSlice";
@@ -22,7 +22,6 @@ export default function PostDetails({ details }) {
   }, [carts]);
   const { title, price, rating, images, id, stock, discountPercentage } =
     details;
-
   const {
     main,
     container,
@@ -179,9 +178,10 @@ export default function PostDetails({ details }) {
                 style={{
                   background: "black",
                 }}
-                // onClick={() =>
-                //   dispatch(addToCart({ id, title, image, price, count }))
-                // }
+                onClick={() => {
+                  location.href = "./ordersuccess";
+                  dispatch(addToCart({ id, title, images, price, count }));
+                }}
               >
                 Buy
               </Button>

@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <title>DemoShop</title>
         <link
           href="https://fonts.googleapis.com/css?family=Lato:400,700"
           rel="stylesheet"

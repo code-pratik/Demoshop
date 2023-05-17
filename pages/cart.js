@@ -5,6 +5,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { useState, useEffect } from "react";
 import { Button, IconButton, TextField } from "@mui/material";
 import { DeleteItem } from "@/slices/cartSlice";
+import Goback from "@/componets/goback";
 function Cart() {
   const {
     main,
@@ -20,6 +21,7 @@ function Cart() {
     list2,
     itemlist,
     deletebtn,
+
     Total,
     CheckOutBtn,
   } = styles;
@@ -31,7 +33,14 @@ function Cart() {
   }, [cartproducts]);
 
   const dispatch = useDispatch();
-
+  const order = () => {
+    if (cartvalues.length !== 0) {
+      location.href = "./ordersuccess";
+    } else {
+      alert("add some products into cart");
+    }
+    localStorage.setItem("cartproducts", JSON.stringify([]));
+  };
   return (
     <div className={main}>
       {console.log(cartvalues)}
@@ -55,7 +64,7 @@ function Cart() {
                 </IconButton>
               </li>
               <li>
-                <img src={images[3]} width="200" height="200" />
+                <img src={images[0]} width="200" height="200" />
               </li>
               <li>{title}</li>
               <li>{price}</li>
@@ -107,10 +116,17 @@ function Cart() {
               }, 0)}
             </div>
           </div>
-          <Button className={CheckOutBtn} style={{ background: "black" }}>
+          <Button
+            className={CheckOutBtn}
+            onClick={order}
+            style={{ background: "black" }}
+          >
             Proceed to checkout
           </Button>
         </div>
+      </div>
+      <div style={{ marginLeft: "3rem" }}>
+        <Goback />
       </div>
     </div>
   );

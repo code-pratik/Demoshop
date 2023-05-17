@@ -13,12 +13,11 @@
   border: 1px solid lightgray;
   border-left: none;
   border-radius: 0rem 0.5rem 0.5rem 0rem;
-  width: 40%;
 }
 .leftContainer {
   box-sizing: border-box;
+  width: 100%;
   padding: 1rem;
-  width: 80%;
   border: 1px solid lightgray;
   border-radius: 0.5rem 0rem 0rem 0.5rem;
 }
@@ -70,7 +69,6 @@
   border-right: none;
   float: right;
 }
-
 .Total {
   display: flex;
   justify-content: space-between;

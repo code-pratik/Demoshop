@@ -1,6 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { Button } from "@mui/material";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 function Goback() {
   const Router = useRouter();
   return (
@@ -11,6 +12,7 @@ function Goback() {
         marginTop: "10px",
         color: "white",
       }}
+      startIcon={<ArrowBackIcon />}
       onClick={() => Router.back()}
     >
       go back to previous page

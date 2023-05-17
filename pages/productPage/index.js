@@ -8,6 +8,7 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import DiscountIcon from "@mui/icons-material/Discount";
 import { signOut, useSession } from "next-auth/react";
+import { addToCart } from "@/slices/cartSlice";
 import Login from "../login";
 import {
   MDBContainer,
@@ -21,23 +22,17 @@ import {
 import { useEffect } from "react";
 import { display } from "@mui/system";
 import Goback from "@/componets/goback";
+import { useDispatch } from "react-redux";
 // import { useEffect } from "react";
 
 export default function Posts({ posts }) {
   const { push, asPath } = useRouter();
   const Router = useRouter();
   const { data: session } = useSession();
+  const dispatch = useDispatch();
   const onPreviewDetails = (id) => {
     console.log(asPath);
     push(`/products/${id}`);
-  };
-
-  const addtocart = () => {
-    if (session && session.user) {
-      alert("added to cart");
-    } else {
-      location.href = "./login";
-    }
   };
 
   if (session && session.user) {
@@ -102,12 +97,17 @@ export default function Posts({ posts }) {
                       <div style={{ height: "2rem" }}>
                         <p style={{ fontSize: "1rem" }}>{title}</p>
                       </div>
-                      <MDBCardImage
-                        src={images[0]}
-                        style={{ width: "200px", height: "200px" }}
-                        position="top"
-                        alt="Laptop"
-                      />
+                      <div style={{ textAlign: "center" }}>
+                        <MDBCardImage
+                          src={images[0]}
+                          style={{
+                            padding: "auto",
+                            width: "200px",
+                            height: "200px",
+                          }}
+                          alt="Laptop"
+                        />
+                      </div>
                       <MDBCardBody>
                         <div class="d-flex justify-content-between mb-2">
                           <p class="text-muted mb-0">
@@ -157,7 +157,17 @@ export default function Posts({ posts }) {
                                 float: "right",
                                 fontSize: "0.8rem",
                               }}
-                              onClick={() => addtocart()}
+                              onClick={() => {
+                                dispatch(
+                                  addToCart({
+                                    title,
+                                    price,
+                                    images,
+                                    id,
+                                  })
+                                );
+                                alert("Added To Cart");
+                              }}
                             >
                               Add To Cart
                             </Button>
